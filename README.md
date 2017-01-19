@@ -1,1 +1,1 @@
-# Method-Conjugate-Gradients
+### Метод Сопряженных градиентов
