@@ -1,0 +1,17 @@
+# ограничение на количество итераций
+limit = 100
+
+# размерность матрицы Годунова
+Godunov_matrix_dim = 200
+
+# максимально допустимое отклонение нормы градиента в точке
+norm_residual = 1e-500
+
+# мантисса
+mantissa = 2000
+
+# мантисса при записи вектора X в файл
+mantissa_out = 2000
+
+# путь к каталогу для вывода результатов
+pathResult = /home/aleksey/julia_conj/programms/ver 1.2 различные варианты/GodunovMatrix/Kireev3/result/dim=200 norm residual=1e-500 mantissa=2000

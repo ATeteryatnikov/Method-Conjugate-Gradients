@@ -1,0 +1,70 @@
+"
+"
+"-----------------------------------------------------------------------------------------------------------Kireev 1 1
+"
+"
+"
+dim=100 norm residual=1e-250 mantissa=1000/resultTime.txt:timer: 3.933407718
+dim=200 norm residual=1e-500 mantissa=2000/resultTime.txt:timer: 19.085446518
+dim=25 norm residual=1e-62 mantissa=250/resultTime.txt:timer: .832668464
+dim=50 norm residual=1e-125 mantissa=500/resultTime.txt:timer: 1.125106475
+"
+"
+"-----------------------------------------------------------------------------------------------------------Kireev 1 2
+"
+"
+"
+dim=100 norm residual=1e-250 mantissa=1000/resultTime.txt:timer: 2.784430227
+dim=200 norm residual=1e-500 mantissa=2000/resultTime.txt:timer: 13.131313187
+dim=25 norm residual=1e-62 mantissa=250/resultTime.txt:timer: .820628748
+dim=50 norm residual=1e-125 mantissa=500/resultTime.txt:timer: 1.01434431
+"
+"
+"-----------------------------------------------------------------------------------------------------------Kireev 2 1
+"
+"
+"
+dim=100 norm residual=1e-250 mantissa=1000/resultTime.txt:timer: 3.990158701
+dim=200 norm residual=1e-500 mantissa=2000/resultTime.txt:timer: 19.399853095
+dim=25 norm residual=1e-62 mantissa=250/resultTime.txt:timer: .827894873
+dim=50 norm residual=1e-125 mantissa=500/resultTime.txt:timer: 1.13305135
+"
+"
+"-----------------------------------------------------------------------------------------------------------Kireev 2 2
+"
+"
+"
+dim=100 norm residual=1e-250 mantissa=1000/resultTime.txt:timer: 2.760137909
+dim=200 norm residual=1e-500 mantissa=2000/resultTime.txt:timer: 13.295699026
+dim=25 norm residual=1e-62 mantissa=250/resultTime.txt:timer: .821944988
+dim=50 norm residual=1e-125 mantissa=500/resultTime.txt:timer: 1.015523375
+"
+"
+"-----------------------------------------------------------------------------------------------------------Kireev 16 slide
+"
+"
+"
+dim=100 norm residual=1e-250 mantissa=1000/resultTime.txt:timer: 1.611667973
+dim=200 norm residual=1e-500 mantissa=2000/resultTime.txt:timer: 6.694421971
+dim=25 norm residual=1e-62 mantissa=250/resultTime.txt:timer: .533816934
+dim=50 norm residual=1e-125 mantissa=500/resultTime.txt:timer: .651669404
+"
+"
+"-----------------------------------------------------------------------------------------------------------Ushakov
+"
+"
+"
+dim=100 norm residual=1e-250 mantissa=1000/resultTime.txt:timer: 3.959465588
+dim=200 norm residual=1e-500 mantissa=2000/resultTime.txt:timer: 15.10778447
+dim=25 norm residual=1e-62 mantissa=250/resultTime.txt:timer: 1.932025239
+dim=50 norm residual=1e-125 mantissa=500/resultTime.txt:timer: 2.097025044
+"
+"
+"-----------------------------------------------------------------------------------------------------------Ushakov variant E
+"
+"
+"
+dim=100 norm residual=1e-250 mantissa=1000/resultTime.txt:timer: 2.881636564
+dim=200 norm residual=1e-500 mantissa=2000/resultTime.txt:timer: 9.927693616
+dim=25 norm residual=1e-62 mantissa=250/resultTime.txt:timer: 2.080774947
+dim=50 norm residual=1e-125 mantissa=500/resultTime.txt:timer: 2.178825141
