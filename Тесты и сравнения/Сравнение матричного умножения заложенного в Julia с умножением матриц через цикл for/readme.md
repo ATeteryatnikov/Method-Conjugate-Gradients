@@ -14,7 +14,7 @@ for j in 1:1:n
 end  
 ```
 Результаты:  
-
+***
 с использованием матричного умножения Julia  
  
 dim=100 norm residual=1e-100 mantissa=70/resultTime.txt:timer: 1.222873403  
@@ -27,7 +27,7 @@ dim=50 norm residual=1e-150 mantissa=70/resultTime.txt:timer: .515982735
 dim=50 norm residual=1e-200 mantissa=70/resultTime.txt:timer: .507994048  
 dim=50 norm residual=1e-250 mantissa=70/resultTime.txt:timer: .493998082  
 dim=50 norm residual=1e-300 mantissa=70/resultTime.txt:timer: .496811836  
-
+***
 С использованием  матричного умножения через цикл «for»  
 
 dim=100 norm residual=1e-100 mantissa=70/resultTime.txt:timer: 1.726621903  
@@ -40,7 +40,7 @@ dim=50 norm residual=1e-150 mantissa=70/resultTime.txt:timer: .617997116
 dim=50 norm residual=1e-200 mantissa=70/resultTime.txt:timer: .589804076  
 dim=50 norm residual=1e-250 mantissa=70/resultTime.txt:timer: .594593436  
 dim=50 norm residual=1e-300 mantissa=70/resultTime.txt:timer: .6194264  
-
+***
 Вывод:
 После серии запусков программы godunovMatrix.jl с различными входными параметрами, смотря на время работы программы можно сделать вывод, что матричное умножение реализованное в Julia работает быстрее, чем реализованное матричное умножение через цикл «for».
 
