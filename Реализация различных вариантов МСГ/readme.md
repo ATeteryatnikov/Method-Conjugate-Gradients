@@ -1,10 +1,12 @@
 ### Сравнение различных версий метода сопряженных градиентов
 
-Проведены запуски различных вариантов программы godunovMatrix.jl для решения СЛАУ Годунова методом сопряженных градиентов с различными входными параметрами.  
+Проведены запуски различных вариантов программы [godunovMatrix](https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/blob/master/%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B%20godunovMatrix.md) с четыремя разными параметрами запуска.  
 Отличие программ заключается в алгоритме МСГ, который взят из источников:
-* Источник 1: Слайды Ушакова о МСГ — 2 варианта алгоритма;
-* Источник 2: презентация Киреев И.В. «Метод сопряженных градиентов» - Красноярск, 2011 — 1 вариант из 16 слайда;
-* Источник 3: Киреев И.В. Экономичные критерии останова итераций в методе сопряженных градиентов 2015 — 4 варианта.
+* [Алгоритм МСГ Ушакова](https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/blob/master/%D0%A0%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85%20%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%20%D0%9C%D0%A1%D0%93/%D0%98%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%20%D0%A3%D1%88%D0%B0%D0%BA%D0%BE%D0%B2%D0%B0.png);
+* [Алгоритм МСГ Ушакова с изменениями](https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/blob/master/%D0%A0%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85%20%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%20%D0%9C%D0%A1%D0%93/%D0%98%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%20%D0%9C%D0%A1%D0%93%20%D0%A3%D1%88%D0%B0%D0%BA%D0%BE%D0%B2%D0%B0%20%D1%81%20%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F%D0%BC%D0%B8.png)
+* [Презентация Киреев И.В. «Метод сопряженных градиентов» - Красноярск, 2011, 16 слайд](https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/blob/master/%D0%A0%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85%20%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%20%D0%9C%D0%A1%D0%93/%D0%98%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%9A%D0%B8%D1%80%D0%B5%D0%B5%D0%B2%20%D0%BE%20%D0%9C%D0%A1%D0%93.pdf);
+* [Киреев И.В. Экономичные критерии останова итераций в методе сопряженных градиентов 2015](https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/blob/master/%D0%A0%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85%20%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%20%D0%9C%D0%A1%D0%93/%D0%98%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8/%D0%9A%D0%B8%D1%80%D0%B5%D0%B5%D0%B2%20%D0%98.%D0%92.%20%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%BA%D1%80%D0%B8%D1%82%D0%B5%D1%80%D0%B8%D0%B8%20%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0%20%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B9%20%D0%B2%20%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B5%20%D1%81%D0%BE%D0%BF%D1%80%D1%8F%D0%B6%D0%B5%D0%BD%D0%BD%D1%8B%D1%85%20%D0%B3%D1%80%D0%B0%D0%B4%D0%B8%D0%B5%D0%BD%D1%82%D0%BE%D0%B2%202015.pdf), алгоритм приведен на 2 странице. Для вычисления коэффициентов даны на выбор по 2 формулы: <img src="https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/blob/master/%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8B%20%D0%B4%D0%BB%D1%8F%20readme/%D0%BA%D0%BE%D1%8D%D1%84%D1%84%D0%B8%D1%86%D0%B8%D0%B5%D0%BD%D1%82%D1%8B%20%D0%B2%20%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D0%B5%20%D0%9C%D0%A1%D0%93%20%D0%9A%D0%B8%D1%80%D0%B5%D0%B5%D0%B2%D0%B01.png" width="600">  
+Получаем 4 алгоритма при использовании различных формул.
 
 Параметры запуска программ:  
 1. dim=200 norm residual=1e-500 mantissa=2000  
@@ -80,7 +82,7 @@ dim=100 norm residual=1e-250 mantissa=1000 timer: 2.881636564
 dim=50 norm residual=1e-125 mantissa=500 timer: 2.178825141  
 dim=25 norm residual=1e-62 mantissa=250 timer: 2.080774947  
 
-Сравним время работы программ для разных размерностей:  
+Сравним время работы программ для разных размерностей (цифры указывают на номер программы, нумерация указана выше):  
 dim=200 5<7<2<4<6<1<3  
 dim=100 5<4<2<7<1<6<3  
 dim=50  5<2<4<1<3<6<7  
