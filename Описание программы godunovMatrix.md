@@ -55,5 +55,4 @@ godunovMatrix - программа реализованная на языке п
 
 ### файл readFile.jl
 
-readFile.jl подключается в файле godunovMatrix.jl. 
-Разбор кода readFile.jl по [ссылке]().
+readFile.jl подключается в файле godunovMatrix.jl. readFile.jl производит считывание параметров программы из конфигурационного файла config.txt.
