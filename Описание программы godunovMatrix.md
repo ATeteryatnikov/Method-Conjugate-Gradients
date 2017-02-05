@@ -5,6 +5,9 @@ godunovMatrix - программа реализованная на языке п
 [методом сопряженных градиентов](https://ru.wikipedia.org/wiki/Метод_сопряжённых_градиентов_(для_решения_СЛАУ)).  
 
 В описываемой программе используется алгоритм МСГ из [презентации Киреева о МСГ](https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/blob/master/%D0%A0%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85%20%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%20%D0%9C%D0%A1%D0%93/%D0%98%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%9A%D0%B8%D1%80%D0%B5%D0%B5%D0%B2%20%D0%BE%20%D0%9C%D0%A1%D0%93.pdf), 16 слайд.  
+
+В качестве критерия остановки в цикле алгоритма МСГ используется максимально допустимое отклонение нормы градиента, цикл завершается при достижении нормы градиента не превышающей "norm_residual". Дополнительный критерий остановки - ограничение на количество итераций.(см. код программы по [ссылке](https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/blob/master/%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D1%84%D0%B0%D0%B9%D0%BB%D0%B0%20godunovMatrix%20jl%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B%20godunovMatrix.md)).
+
 Программа расположена по [ссылке](https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/tree/master/%D0%A0%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85%20%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%20%D0%9C%D0%A1%D0%93/Kireev%2016%20slide).  
 > В момент написания программы использовалась Julia версии 0.4.5.  
 
@@ -19,8 +22,8 @@ godunovMatrix - программа реализованная на языке п
 * limit - ограничение на количество итераций в цикле МСГ;  
 * Godunov_matrix_dim - размерность СЛАУ Годунова;  
 * norm_residual - максимально допустимое отклонение нормы градиента в точке X;  
-* mantissa - значение мантиссы для типа данных BigFloat, указывается в битах;  
-* mantissa_out - мантисса BigFloat при записи в файл.  
+* mantissa - значение мантиссы для типа данных BigFloat, указывается в битах (мантисса с которой производится расчет алгоритма МСГ);  
+* mantissa_out - значение мантиссы для типа данных BigFloat предназначено для Уменьшение количества знаков после запятой при записи результатов в файл.
 
 > в программе для расчетов используется тип данных BigFloat - для работы с числами произвольной точности, мантисса которых указывается пользователем (в конфигурационном файле config.txt параметр mantissa).
 
@@ -41,6 +44,16 @@ godunovMatrix - программа реализованная на языке п
 
 Пример каталога result по [ссылке](https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/tree/master/%D0%A0%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85%20%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%20%D0%9C%D0%A1%D0%93/Kireev%2016%20slide/result).
 
+***
 
+### файл godunovMatrix.jl
 
+Запуск программы godunovMatrix производится через файл godunovMatrix.jl. 
+Разбор кода godunovMatrix.jl по [ссылке](https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/blob/master/%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D1%84%D0%B0%D0%B9%D0%BB%D0%B0%20godunovMatrix%20jl%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B%20godunovMatrix.md).
 
+***  
+
+### файл readFile.jl
+
+readFile.jl подключается в файле godunovMatrix.jl. 
+Разбор кода readFile.jl по [ссылке]().
