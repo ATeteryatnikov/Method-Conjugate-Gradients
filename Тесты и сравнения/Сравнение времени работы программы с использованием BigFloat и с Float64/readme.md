@@ -1,79 +1,16 @@
-### Сравнение скорости работы программы godunovMatrix.jl с использованием типа BigFloat с программой использующей тип Float64.
+### Сравнение скорости работы программы godunovMatrix с использованием типа BigFloat с программой использующей тип Float64.
 
-Для сравнения, величина мантиссы BigFloat в тесте была равна 53.
+описание программы [godunovMatrix](https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/blob/master/%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B%20godunovMatrix.md).  
+
+Проверим, во сколько раз изменится время работы программы godunovMatrix, если изменить тип данных с BigFloat на Float64. Для этого была создана копия программы godunovMatrix, но с изменением типа данных BigFloat на Float64. 
+
+> Для сравнения, величина мантиссы BigFloat в тесте была равна 53.
 
 Алгоритм программы взят из:   
 презентация Киреев И.В. «Метод сопряженных градиентов» - Красноярск, 2011  
 В программе реализован 16 слайд.  
 
-Результаты:  
-
-Использование Float64, время указано в секундах:  
-
-dim=100 norm residual=1e-100/resultTime.txt:timer: .247689071  
-dim=100 norm residual=1e-150/resultTime.txt:timer: .247446599  
-dim=100 norm residual=1e-200/resultTime.txt:timer: .248822878  
-dim=100 norm residual=1e-250/resultTime.txt:timer: .250439554  
-dim=100 norm residual=1e-300/resultTime.txt:timer: .246921085  
-dim=150 norm residual=1e-100/resultTime.txt:timer: .256549745  
-dim=150 norm residual=1e-150/resultTime.txt:timer: .255614444  
-dim=150 norm residual=1e-200/resultTime.txt:timer: .265277581  
-dim=150 norm residual=1e-250/resultTime.txt:timer: .257294477  
-dim=150 norm residual=1e-300/resultTime.txt:timer: .254945937  
-dim=200 norm residual=1e-100/resultTime.txt:timer: .263258402  
-dim=200 norm residual=1e-150/resultTime.txt:timer: .276242327  
-dim=200 norm residual=1e-200/resultTime.txt:timer: .267746901  
-dim=200 norm residual=1e-250/resultTime.txt:timer: .268678572  
-dim=200 norm residual=1e-300/resultTime.txt:timer: .275622797  
-dim=300 norm residual=1e-100/resultTime.txt:timer: .322033694  
-dim=300 norm residual=1e-150/resultTime.txt:timer: .287473332  
-dim=300 norm residual=1e-200/resultTime.txt:timer: .301599427  
-dim=300 norm residual=1e-250/resultTime.txt:timer: .301052983  
-dim=300 norm residual=1e-300/resultTime.txt:timer: .28748395  
-dim=400 norm residual=1e-100/resultTime.txt:timer: .324215663  
-dim=400 norm residual=1e-150/resultTime.txt:timer: .324152772  
-dim=400 norm residual=1e-200/resultTime.txt:timer: .3519305  
-dim=400 norm residual=1e-250/resultTime.txt:timer: .349069708  
-dim=400 norm residual=1e-300/resultTime.txt:timer: .321218262  
-dim=50 norm residual=1e-100/resultTime.txt:timer: .244241335  
-dim=50 norm residual=1e-150/resultTime.txt:timer: .243868875  
-dim=50 norm residual=1e-200/resultTime.txt:timer: .242732219  
-dim=50 norm residual=1e-250/resultTime.txt:timer: .24277671  
-dim=50 norm residual=1e-300/resultTime.txt:timer: .243029343  
-
-Использование BigFloat, время указано в секундах:  
-
-dim=100 norm residual=1e-100 mantissa=53/resultTime.txt:timer: 1.19888447  
-dim=100 norm residual=1e-150 mantissa=53/resultTime.txt:timer: 1.197986957  
-dim=100 norm residual=1e-200 mantissa=53/resultTime.txt:timer: 1.196302349  
-dim=100 norm residual=1e-250 mantissa=53/resultTime.txt:timer: 1.202381269  
-dim=100 norm residual=1e-300 mantissa=53/resultTime.txt:timer: 1.197221184  
-dim=150 norm residual=1e-100 mantissa=53/resultTime.txt:timer: 2.445323662  
-dim=150 norm residual=1e-150 mantissa=53/resultTime.txt:timer: 2.42252436  
-dim=150 norm residual=1e-200 mantissa=53/resultTime.txt:timer: 2.420117925  
-dim=150 norm residual=1e-250 mantissa=53/resultTime.txt:timer: 2.450692299  
-dim=150 norm residual=1e-300 mantissa=53/resultTime.txt:timer: 2.436763353  
-dim=200 norm residual=1e-100 mantissa=53/resultTime.txt:timer: 4.274265469  
-dim=200 norm residual=1e-150 mantissa=53/resultTime.txt:timer: 4.269922667  
-dim=200 norm residual=1e-200 mantissa=53/resultTime.txt:timer: 4.329873413  
-dim=200 norm residual=1e-250 mantissa=53/resultTime.txt:timer: 4.355219735  
-dim=200 norm residual=1e-300 mantissa=53/resultTime.txt:timer: 4.242222756  
-dim=300 norm residual=1e-100 mantissa=53/resultTime.txt:timer: 10.331859548  
-dim=300 norm residual=1e-150 mantissa=53/resultTime.txt:timer: 10.194878029  
-dim=300 norm residual=1e-200 mantissa=53/resultTime.txt:timer: 10.268720241  
-dim=300 norm residual=1e-250 mantissa=53/resultTime.txt:timer: 10.314904964  
-dim=300 norm residual=1e-300 mantissa=53/resultTime.txt:timer: 10.645922959  
-dim=400 norm residual=1e-100 mantissa=53/resultTime.txt:timer: 18.316483888  
-dim=400 norm residual=1e-150 mantissa=53/resultTime.txt:timer: 17.836407966  
-dim=400 norm residual=1e-200 mantissa=53/resultTime.txt:timer: 17.826969979  
-dim=400 norm residual=1e-250 mantissa=53/resultTime.txt:timer: 18.246481238  
-dim=400 norm residual=1e-300 mantissa=53/resultTime.txt:timer: 18.009307385  
-dim=50 norm residual=1e-100 mantissa=53/resultTime.txt:timer: .575346597  
-dim=50 norm residual=1e-150 mantissa=53/resultTime.txt:timer: .480637458  
-dim=50 norm residual=1e-200 mantissa=53/resultTime.txt:timer: .484138329  
-dim=50 norm residual=1e-250 mantissa=53/resultTime.txt:timer: .480808631  
-dim=50 norm residual=1e-300 mantissa=53/resultTime.txt:timer: .482174949  
-
+[Результаты](https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/blob/master/%D0%A2%D0%B5%D1%81%D1%82%D1%8B%20%D0%B8%20%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F/%D0%A1%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B%20%D1%81%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%D0%BC%20BigFloat%20%D0%B8%20%D1%81%20Float64/%D0%A0%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%D1%8B.md).  
 
 Вывод: Использование BigFloat замедляет работу программы  
 для размерности матрицы Годунова 400, приблизительно в 57 раз.  
