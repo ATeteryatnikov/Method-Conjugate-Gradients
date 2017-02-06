@@ -1,10 +1,12 @@
 ### Сравнение скорости работы программы godunovMatrix реализованной на julia с программой МСГ реализованной на C++. 
 
-В программе godunovMatrix.jl использовался тип Float64.
+Программа Ушакова МСГ расположена по [ссылке](https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/blob/master/%D0%A2%D0%B5%D1%81%D1%82%D1%8B%20%D0%B8%20%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F/%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%D0%BA%D0%BE%D1%80%D0%BE%D1%81%D1%82%D0%B8%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B%20C%2B%2B%20%D0%B8%20Julia/Processor_no_tests.tar.gz).
 
-Алгоритм программы взят из: Программа Ушакова МСГ.
+В программе [godunovMatrix](https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/blob/master/%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B%20godunovMatrix.md) использовался тип Float64. Программа расположена по [ссылке](https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/tree/master/%D0%A2%D0%B5%D1%81%D1%82%D1%8B%20%D0%B8%20%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F/%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%D0%BA%D0%BE%D1%80%D0%BE%D1%81%D1%82%D0%B8%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B%20C%2B%2B%20%D0%B8%20Julia/Ushakov_slide).  
 
-При проведении тестов, в программе на Julia, ограничение на количество итераций выбиралось такое же сколько потребовалось программе на C++.
+Алгоритм программы взят из кода программы Ушакова МСГ.  
+
+При проведении тестов, сначала запускалась программа на C++ и после, в программе godunovMatrix ограничение на количество итераций выбиралось такое же сколько потребовалось программе на C++.
 
 Результаты:
 
