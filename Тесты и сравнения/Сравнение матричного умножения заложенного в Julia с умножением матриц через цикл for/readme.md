@@ -13,34 +13,8 @@ for j in 1:1:n
    end  
 end  
 ```
-Результаты:  
-***
-с использованием матричного умножения Julia  
- 
-dim=100 norm residual=1e-100 mantissa=70/resultTime.txt:timer: 1.222873403  
-dim=100 norm residual=1e-150 mantissa=70/resultTime.txt:timer: 1.180078767  
-dim=100 norm residual=1e-200 mantissa=70/resultTime.txt:timer: 1.197781647  
-dim=100 norm residual=1e-250 mantissa=70/resultTime.txt:timer: 1.184367172  
-dim=100 norm residual=1e-300 mantissa=70/resultTime.txt:timer: 1.184397378  
-dim=50 norm residual=1e-100 mantissa=70/resultTime.txt:timer: .476283116  
-dim=50 norm residual=1e-150 mantissa=70/resultTime.txt:timer: .515982735  
-dim=50 norm residual=1e-200 mantissa=70/resultTime.txt:timer: .507994048  
-dim=50 norm residual=1e-250 mantissa=70/resultTime.txt:timer: .493998082  
-dim=50 norm residual=1e-300 mantissa=70/resultTime.txt:timer: .496811836  
-***
-С использованием  матричного умножения через цикл «for»  
+[Результаты.]()https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/blob/master/%D0%A2%D0%B5%D1%81%D1%82%D1%8B%20%D0%B8%20%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F/%D0%A1%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BC%D0%B0%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%83%D0%BC%D0%BD%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B7%D0%B0%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%B2%20Julia%20%D1%81%20%D1%83%D0%BC%D0%BD%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC%20%D0%BC%D0%B0%D1%82%D1%80%D0%B8%D1%86%20%D1%87%D0%B5%D1%80%D0%B5%D0%B7%20%D1%86%D0%B8%D0%BA%D0%BB%20for/%D0%A0%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%D1%8B.md  
 
-dim=100 norm residual=1e-100 mantissa=70/resultTime.txt:timer: 1.726621903  
-dim=100 norm residual=1e-150 mantissa=70/resultTime.txt:timer: 1.705324255  
-dim=100 norm residual=1e-200 mantissa=70/resultTime.txt:timer: 1.728482246  
-dim=100 norm residual=1e-250 mantissa=70/resultTime.txt:timer: 1.697802452  
-dim=100 norm residual=1e-300 mantissa=70/resultTime.txt:timer: 1.765456323  
-dim=50 norm residual=1e-100 mantissa=70/resultTime.txt:timer: .592598621  
-dim=50 norm residual=1e-150 mantissa=70/resultTime.txt:timer: .617997116  
-dim=50 norm residual=1e-200 mantissa=70/resultTime.txt:timer: .589804076  
-dim=50 norm residual=1e-250 mantissa=70/resultTime.txt:timer: .594593436  
-dim=50 norm residual=1e-300 mantissa=70/resultTime.txt:timer: .6194264  
-***
 Вывод:
 После серии запусков программы godunovMatrix.jl с различными входными параметрами, смотря на время работы программы можно сделать вывод, что матричное умножение реализованное в Julia работает быстрее, чем реализованное матричное умножение через цикл «for».
 
