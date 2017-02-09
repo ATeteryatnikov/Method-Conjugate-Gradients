@@ -1,3 +1,5 @@
+#cut.jl - программа на языке Julia, предназначена для обрезания в "compare time.txt" путей к каталогам с результатами.
+
 file = open("compare\ time.txt", "r")
 strs = readlines(file)
 for i in 1:1:round(Int,length(strs)/2)
