@@ -1,45 +1,12 @@
-### Внесение алгоритма МСГ в функцию названную conj_grad() и сравнение по времени работы с программой godunovMatrix.jl без внесения в функцию алгоритма
+### Внесение алгоритма МСГ в функцию названную conj_grad() и сравнение по времени работы с программой godunovMatrix без внесения в функцию алгоритма
 
-Cравнение по времени работы 2 программ godunovMatrix.jl.  
+Cравнение по времени работы 2 программ [godunovMatrix]
+(https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/blob/master/%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B%20godunovMatrix.md).    
+Алгоритм взят из: [презентация Киреев И.В. «Метод сопряженных градиентов» - Красноярск, 2011
+В программе реализован 16 слайд.]
+(https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/blob/master/%D0%A0%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85%20%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%20%D0%9C%D0%A1%D0%93/%D0%98%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%9A%D0%B8%D1%80%D0%B5%D0%B5%D0%B2%20%D0%BE%20%D0%9C%D0%A1%D0%93.pdf)  
 Отличие программ состоит в том, что в одной из них часть алгоритма метода сопряженных градиентов, заключенная в цикле, реализована в виде функции conj_grad().
 
-Результат:
-***
-Без представления алгоритма МСГ в виде функции  
-
-dim=200 norm residual=1e-100 mantissa=53/resultTime.txt:timer: 4.23799242  
-dim=200 norm residual=1e-150 mantissa=53/resultTime.txt:timer: 4.30566344  
-dim=200 norm residual=1e-200 mantissa=53/resultTime.txt:timer: 4.242326593  
-dim=200 norm residual=1e-250 mantissa=53/resultTime.txt:timer: 4.28694417  
-dim=200 norm residual=1e-300 mantissa=53/resultTime.txt:timer: 4.222064748  
-dim=300 norm residual=1e-100 mantissa=53/resultTime.txt:timer: 10.391606217  
-dim=300 norm residual=1e-150 mantissa=53/resultTime.txt:timer: 10.294346857  
-dim=300 norm residual=1e-200 mantissa=53/resultTime.txt:timer: 10.421635299  
-dim=300 norm residual=1e-250 mantissa=53/resultTime.txt:timer: 10.207616628  
-dim=300 norm residual=1e-300 mantissa=53/resultTime.txt:timer: 10.513710476  
-dim=400 norm residual=1e-100 mantissa=53/resultTime.txt:timer: 17.995255293  
-dim=400 norm residual=1e-150 mantissa=53/resultTime.txt:timer: 17.962957734  
-dim=400 norm residual=1e-200 mantissa=53/resultTime.txt:timer: 17.744473515  
-dim=400 norm residual=1e-250 mantissa=53/resultTime.txt:timer: 17.837666793  
-dim=400 norm residual=1e-300 mantissa=53/resultTime.txt:timer: 18.031737135  
-***  
-С представлением алгоритма МСГ в виде функции  
-
-dim=200 norm residual=1e-100 mantissa=53/resultTime.txt:timer: 4.234898688  
-dim=200 norm residual=1e-150 mantissa=53/resultTime.txt:timer: 4.24114716  
-dim=200 norm residual=1e-200 mantissa=53/resultTime.txt:timer: 4.29118939  
-dim=200 norm residual=1e-250 mantissa=53/resultTime.txt:timer: 4.255858056  
-dim=200 norm residual=1e-300 mantissa=53/resultTime.txt:timer: 4.299417494  
-dim=300 norm residual=1e-100 mantissa=53/resultTime.txt:timer: 10.51071326  
-dim=300 norm residual=1e-150 mantissa=53/resultTime.txt:timer: 10.368343828  
-dim=300 norm residual=1e-200 mantissa=53/resultTime.txt:timer: 10.437339186  
-dim=300 norm residual=1e-250 mantissa=53/resultTime.txt:timer: 10.314385187  
-dim=300 norm residual=1e-300 mantissa=53/resultTime.txt:timer: 10.336085341  
-dim=400 norm residual=1e-100 mantissa=53/resultTime.txt:timer: 18.085737118  
-dim=400 norm residual=1e-150 mantissa=53/resultTime.txt:timer: 18.126490445  
-dim=400 norm residual=1e-200 mantissa=53/resultTime.txt:timer: 18.117555716  
-dim=400 norm residual=1e-250 mantissa=53/resultTime.txt:timer: 18.008305622  
-dim=400 norm residual=1e-300 mantissa=53/resultTime.txt:timer: 18.173051074  
-***  
+[Результаты.](https://github.com/ATeteryatnikov/Method-Conjugate-Gradients/blob/master/%D0%A2%D0%B5%D1%81%D1%82%D1%8B%20%D0%B8%20%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F/%D0%92%D0%BD%D0%B5%D1%81%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D0%B0%20%D0%9C%D0%A1%D0%93%20%D0%B2%20%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8E%20conj_grad/%D0%A0%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%D1%8B.md)
 
 Вывод: тест показал, что время работы программ едва отличается и для размерности СЛАУ Годунова равное 400 заметно, что для варианта программы без использования функции conj_grad() время работы меньше на 0,1 секунды.  
